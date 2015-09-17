@@ -3,12 +3,14 @@ package ar.edu.clientes
 import java.math.BigDecimal
 import java.util.ArrayList
 import java.util.List
+import org.eclipse.xtend.lib.annotations.Accessors
 
+@Accessors
 class Cliente {
 	
-	@Property String nombre
-	@Property List<Factura> facturas
-	@Property BigDecimal ingresos
+	String nombre
+	List<Factura> facturas
+	BigDecimal ingresos
 	CriterioCredito criterioCredito
 		
 	new(){
