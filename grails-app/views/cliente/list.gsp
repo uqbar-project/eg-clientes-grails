@@ -9,40 +9,49 @@
 <body>
 	<div style="width: 90%; padding: 15pt;">
 		<div class="clearfix content-heading">
-			<h2>&nbsp;Clientes</h2>
+			<h1>&nbsp;Clientes</h1>
 		</div>
 
-		<div class="accordion" id="accordionPadre">
-			<div class="accordion-group">
-				<div class="accordion-heading">
+		<div class="panel-group" id="accordionBusqueda">
+			<div class="panel panel-default">
+				<div class="panel-heading">
 					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#accordionPadre" href="#collapseOne">
+						data-parent="#accordionBusqueda" href="#collapseOne">
 						Par&aacute;metros de b&uacute;squeda </a>
 				</div>
-				<div id="collapseOne" class="accordion-body collapse in">
-					<div class="accordion-inner">
+				<div id="collapseOne" class="panel-collapse collapse in">
+					<div class="panel-body">
 						<form class="form-search">
-							<fieldset>
-								<label>Saldo desde:</label> 
-								<input type="text" name="desde" id="desde" class="input" placeholder="Desde..." value="${clienteBusqueda?.desde}"> 
-								<label>Hasta:</label> 
-								<input type="text" class="input" name="hasta" id="hasta" placeholder="Hasta..." value="${clienteBusqueda?.hasta}">
-								<button type="submit" class="btn btn-primary">
-									<i class="icon-search icon-white">
-									</i>
-								</button>
-							</fieldset>
+							<div class="row">
+  								<div class="col-md-5">
+									<label>Saldo desde:</label> 
+									<input type="text" name="desde" id="desde" class="form-control" placeholder="Desde..." value="${clienteBusqueda?.desde}">
+								</div>
+								<div class="col-md-5">
+									<label>Hasta:</label> 
+									<input type="text" class="form-control" name="hasta" id="hasta" placeholder="Hasta..." value="${clienteBusqueda?.hasta}">
+								</div>
+	 							<div class="col-md-2">
+	 								<br>
+									<button type="submit" class="btn btn-primary" title="Buscar clientes">
+										<span class="glyphicon glyphicon-search">
+										</span>
+									</button>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
-				<div class="accordion-group">
-					<div class="accordion-heading">
+			</div>
+			<div class="panel-group" id="accordionResultados">
+				<div class="panel panel-default">
+					<div class="panel-heading">
 						<a class="accordion-toggle" data-toggle="collapse"
-							data-parent="#accordionPadre" href="#collapseTwo"> Resultados 
+							data-parent="#accordionResultados" href="#collapseTwo"> Resultados 
 						</a>
 					</div>
-					<div id="collapseTwo" class="accordion-body collapse in">
-						<div class="accordion-inner">
+					<div id="collapseTwo" class="panel-collapse collapse in">
+						<div class="panel-body">
 							<div id="cliente-libro" class="content scaffold-list">
 								<table class="table table-striped table-bordered table-hover table-condensed">
 									<thead>
@@ -59,14 +68,14 @@
 												</td>
 												<td style="text-align: right;">
 													<g:if test="${cliente.esMoroso()}">
-														<span class="badge badge-important">
+														<h4><span class="label label-danger">
 														${Conversor.convertir(cliente.saldo())}
-														</span>
+														</span></h4>
 													</g:if>
 													<g:else>
-														<span class="badge badge-success">
+														<h4><span class="label label-success">
 														Sin deuda
-														</span>
+														</span></h4>
 													</g:else>
 												</td>
 												<td style="text-align: right;">
