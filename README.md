@@ -1,6 +1,6 @@
 # Clientes deudores - Integración Grails + Xtend
 
-<img src="https://cloud.githubusercontent.com/assets/4549002/18517870/40a22aee-7a74-11e6-99e0-211e44d7bacf.png" width="100px;" height="100px;"/>
+![deuda](https://cloud.githubusercontent.com/assets/4549002/18567773/095747d4-7b70-11e6-8761-d148a0551594.png)
 
 ## Explicación
 
