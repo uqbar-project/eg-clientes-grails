@@ -22,3 +22,8 @@ Se trata de una aplicación que muestra la deuda de cada uno de los clientes, pe
 * con Twitter Boostrap 3.2.0
 * con Xtend 2.7.3
 
+## Arquitectura propuesta
+
+[!Diagrama general de la arquitectura propuesta](doc/Arquitectura%20general.png)
+
+
