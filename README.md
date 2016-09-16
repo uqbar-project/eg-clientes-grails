@@ -24,6 +24,6 @@ Se trata de una aplicación que muestra la deuda de cada uno de los clientes, pe
 
 ## Arquitectura propuesta
 
-[!Diagrama general de la arquitectura propuesta](doc/Arquitectura%20general.png)
+![Diagrama general de la arquitectura propuesta](doc/Arquitectura%20general.png)
 
 
